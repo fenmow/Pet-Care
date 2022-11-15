@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar ~ a {
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  color: #F6AE2D;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.banner {
+  background-image: url(imgs/bg.jpg);
+}
+
+nav i {
+  color: #F6AE2D;
+  font-size: 40px;
+}
+
+.navbar-brand {
+  color: #F6AE2D;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.navbar-brand:hover {
+  color: #F6AE2D;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, .5);
+}
+
+.title {
+  font-weight: lighter;
+  color: rgba(255, 255, 255, .5);
+}
+
+.bannerText p {
+  font-size: 17px;
+  max-width: 500px;
+  color: rgba(255, 255, 255, .5);
+  letter-spacing: 2px;
+}
+
+.button {
+  width: 100%;
+  max-width: 150px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 5px 5px;
+  font-size: 14px;
+  background-color: #F6AE2D;
+  color: #33658A;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+.img-fluid {
+  width: 40%;
+}
+
+.cards h1 {
+  color:  #2F4858;
+  font-weight: lighter;
+}
+
+.cards {
+  padding: 0 75px;
+}
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  background-color: #F26419;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.card:before {
+  content: "Adopting";
+  position: absolute;
+  top: 15px;
+  padding: 5px;
+  background-color: white;
+  color: #F26419;
+}
+
+.card:nth-child(2) {
+  background-color: #F6AE2D;
+}
+
+.card:nth-child(2):before {
+  content: "Volunteering";
+  color: #F6AE2D;
+}
+
+.card:nth-child(3) {
+  background-color: #86BBD8;
+}
+
+.card:nth-child(3):before {
+  content: "Charity";
+  color: #86BBD8;
+}
+
+.card p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.medium {
+  margin: 0 110px;
+}
+
+.cardButton {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 12px;
+  transition: .4s;
+}
+
+.card:hover .cardButton {
+  height: 100%;
+}
+
+.card .cardButton button {
+  border: none;
+  padding: 5px 15px;
+  color: #F6AE2D;
+  background-color: #33658A;
+  border-radius: 20px;
+  opacity: 0;
+  transition: .6s;
+}
+
+.card:hover .cardButton button {
+  opacity: 1;
+}
+
+.grid-photos {
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 33%);
+  grid-template-areas:
+  "img-1 img-1 img-2 img-3 img-3"
+  "img-1 img-1 img-4 img-5 img-6"
+  "img-7 img-8 img-4 img-9 img-9";
+}
+
+.img__gallery {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+#img-1 {
+  grid-area: img-1;
+}
+
+#img-4 {
+  grid-area: img-2;
+}
+
+#img-8 {
+  grid-area: img-3;
+}
+
+#img-5 {
+  grid-area: img-4;
+}
+
+#img-7 {
+  grid-area: img-5;
+}
+
+#img-9 {
+  grid-area: img-6;
+}
+
+#img-2 {
+  grid-area: img-7;
+}
+
+#img-3 {
+  grid-area: img-8;
+}
+
+#img-6 {
+  grid-area: img-9;
+}
+
+.input-container {
+  position: relative;
+}
+
+label {
+  color: #F26419;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  transition: .2s;
+}
+
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  border-bottom: 1px solid #86BBD8;
+}
+
+.inputBox:focus + label {
+  top: -13px;
+  font-size: 12px;
+  color: #33658A;
+}
+
+.message::placeholder {
+  color: #33658A;
+}
+
+.formButton {
+  border: none;
+  outline: none;
+  background-color: #33658A;
+  color: rgba(255, 255, 255, .5);
+  font-size: 20px;
+  padding: 4px 50px;
+  border-radius: 10px;
+}
+
+.formButton:active {
+  transform: scale(.99);
+}
+
+footer {
+  background-color: #F6AE2D;
+}
+
+footer p {
+  font-size: 19px;
+  color: #33658A;
+}
+
+footer a {
+  color: #33658A;
+  font-size: 19px;
+}
+
+@media screen and (max-width: 1200px) {
+  .cards {
+    padding: 0 35px;
+  }
+
+  .medium {
+    margin: 0 35px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .img-fluid {
+    width: 100%;
+  }
+
+  .medium {
+    margin: 15px 0;
+  }
+
+  .grid-photos {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 33%);
+    grid-template-areas:
+    "img-1 img-1 img-3 img-3 img-3"
+    "img-1 img-1 img-5 img-5 img-6"
+    "img-7 img-8 img-8 img-9 img-9";
+  }
+
+  #img-4, #img-5 {
+    display: none;
+  }
+  
+  .formButton {
+    font-size: 16px;
+  }
+}
